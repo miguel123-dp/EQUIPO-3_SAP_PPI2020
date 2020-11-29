@@ -12,7 +12,7 @@ class Rebus extends React.Component {
             <h1 className="HeaderPr">Dolor de cabeza</h1>
             <div className="conP">
                 <div className="conBP">
-                    <img className="imagP" src="./images/Dcabeza.png"/>
+                    <img className="imagP" src="./images/Dcabeza.png" alt="..."/>
                     <p>
                         Se le recomienda: <br/>
                         __________________ <br/>

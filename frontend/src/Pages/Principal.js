@@ -12,7 +12,7 @@ class Principal extends React.Component {
             <div className="Principal">
                 <h1 className="HeaderPr"> BIENVENIDO A ENFERMERÍA MÓVIL</h1>
                 <div className="conP">
-                    <img className="imagP" src="./images/Principallog.png"/>  
+                    <img className="imagP" src="./images/Principallog.png" alt="..."/>  
                     <div className="conBP">
                         <Link className="linkP" to="/Log">
                             <input className="botonP" type="button" value="INICIAR SESIÓN"/>

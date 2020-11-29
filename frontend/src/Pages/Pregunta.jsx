@@ -11,7 +11,7 @@ class Resul extends React.Component {
         <div className="Load">
             <h1 className="HeaderPr">¿Desea llenar nuevamente el formulario?</h1>
             <div className="conP">
-                <img className="imagP" src="./images/Pregunta.png"/>  
+                <img className="imagP" src="./images/Pregunta.png" alt="..."/>  
                 <div className="conBP">
                     <Link className="linkP" to="/Formu">
                         <input className="botonP" type="button" value="SI"/>

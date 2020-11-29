@@ -15,7 +15,7 @@ class Load extends React.Component {
         return (
         <>
             <div className="Load">
-                <img src="./images/Loadlog.png"  className="Loadimg"/>
+                <img src="./images/Loadlog.png"  className="Loadimg" alt="..."/>
                 <h1 className="Loadtext">ENFERMERIA MOVIL</h1>
             </div>
             {this.state.red&&<Redirect to="/principal"></Redirect>}
