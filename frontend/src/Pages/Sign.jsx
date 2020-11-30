@@ -43,7 +43,7 @@ class Sign extends React.Component {
       .catch((error) => {
         console.log(error.message);
       });
-    return this.x();
+    return this.x;
   };
 
   handleChange = async (e) => {
@@ -56,7 +56,7 @@ class Sign extends React.Component {
     });
     console.log(this.state.form);
   };
-
+/*
   usuarioMatch = async (user, pass) => {
       let m = this.state.datos;
     const un = await m.find(
@@ -68,16 +68,15 @@ class Sign extends React.Component {
     const usernameLog = this.state.form.username;
     const passwordLog = this.state.form.password;
 
-    if (un.username === usernameLog && pd.password === passwordLog) {
+    if (un === usernameLog && pd === passwordLog) {
       return "/Bform";
     } else {
       return "/Log";
     }
   };
-
+*/
   SignOrLog = () => {
-    let y = this.state.form.username;
-    let z = this.state.form.password;
+
     if (this.props.titulo !== "Iniciar sesión") {
       return (
         <Link
@@ -90,15 +89,15 @@ class Sign extends React.Component {
       );
     } else {
       return (
-        <Link to={this.usuarioMatch(y, z)} className="linkIR">
+        <Link to="/Bform" className="linkIR">
           <img className="flecha" src="./images/Avanzar.png" alt="..." />
         </Link>
       );
     }
   };
 
-  componentDidMount() {
-    this.peticionGet();
+  async componentDidMount() {
+     await this.peticionGet();
   }
 
   render() {

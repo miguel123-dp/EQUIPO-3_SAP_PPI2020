@@ -14,8 +14,8 @@ class Formu extends React.Component {
     };
   }
 
-  peticionGet = () => {
-    axios
+    peticionGet = async () => {
+    await axios
       .get("https://api-fake-enfermera-movil.vercel.app/questions")
       .then((res) => {
         this.setState({
@@ -87,7 +87,7 @@ class Formu extends React.Component {
     
         const datos = this.state.datos;
         for (let i = 0; i <= datos.length; i++) {
-          if (datos[i].res === true) {
+          if (datos[i] === true) {
             truth += 1;
           } else {
             lie += 1;

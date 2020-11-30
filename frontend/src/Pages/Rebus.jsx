@@ -3,8 +3,28 @@ import { Link } from 'react-router-dom';
 class Rebus extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {  }
+        this.state = { 
+            datos: []
+         }
     }
+/*
+    peticionGet = async () => {
+        await axios
+          .get("https://api-fake-enfermera-movil.vercel.app/enfermedades")
+          .then((res) => {
+            this.setState({
+              datos: res.data,
+            });
+          })
+          .catch((error) => {
+            console.log(error.message);
+          });
+      };
+
+      componentDidMount(){
+          this.peticionGet();
+      }
+*/
     render() { 
         return ( 
         <>
@@ -13,7 +33,7 @@ class Rebus extends React.Component {
             <div className="conP">
                 <div className="conBP">
                     <img className="imagP" src="./images/Dcabeza.png" alt="..."/>
-                    <p>
+                    <p className="izquierda text-wrap">
                         Se le recomienda: <br/>
                         __________________ <br/>
                         __________________

@@ -3,8 +3,19 @@ import { Link } from 'react-router-dom';
 class Buscador extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {  }
+        this.state = { 
+            Buscar: ''
+         }
     }
+
+    handleChange = async (e) => {
+        e.persist();
+        await this.setState({
+          Buscar: e.target.value,
+        });
+        console.log(this.state.form);
+      };
+
     render() { 
         return ( 
             <>
@@ -12,7 +23,7 @@ class Buscador extends React.Component {
                 <h1 className="HeaderPr">Busca diversas enfermedades</h1>
                 <img className="imagIR"src="./images/buscador.jpg" alt="..."/>
                 <div className="coninputs">
-                    <input type="text" className="entradasIR" placeholder="Buscar"/>
+                    <input type="text" className="entradasIR" placeholder="Buscar" onChange={this.handleChange} value="" />
                 </div>
                 <div className="conredes">
                     <Link to="/pregunta" className="linkIR">
